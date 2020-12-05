@@ -1,9 +1,15 @@
 .container {
     justify-content: center;
-    width: 600px;
-    background-color: aliceblue;
+    margin-top: 25%;
+    /* background-color: aliceblue; */
     padding: 20px;
     box-shadow: #1564ad;
+}
+
+.question {
+    background-color: #3a7af1e5;
+    padding: 25px;
+    
 }
 
 .button {
@@ -20,7 +26,8 @@
 	font-family:Arial;
 	font-size:17px;
 	font-weight:bold;
-	padding:23px 76px;
+    padding:16px 45px;
+    margin: 10px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #528ecc;
 }

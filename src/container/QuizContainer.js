@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import './QuizContainer.css'
+import Quiz from '../components/Quiz.js'
 
 
 const apiUrl = 'https://opentdb.com/api.php?amount=5&category=18&difficulty=easy&type=multiple';
 
 
 function QuizContainer() {
-    const [questions, setQuestions] = useState([]);
+    const [question, setQuestions] = useState([]);
 
     useEffect(() => {
         fetch(apiUrl)
@@ -16,22 +17,20 @@ function QuizContainer() {
         })
     }, [])
 
-        return (questions.length > 0 ?(
+        return (question.length > 0 ?(
             <div className="container">
                  
-                <div> <p dangerouslySetInnerHTML={{ __html:questions[0].question } }/></div>
-                    <div >
-                        <button className="button">1. {questions[0].correct_answer}</button>
-                        <button className="button">2. {questions[0].incorrect_answers[0]}</button>
-                        <button className="button">3. {questions[0].incorrect_answers[1]}</button>
-                        <button className="button">4. {questions[0].incorrect_answers[2]}</button>
-                    </div>
+                <Quiz data={question[0]} handleAnswer={handleAnswer}/>
                 
             </div>
             ) : (
                 <p className="loading">loading...</p>
             )
         )
+
+    function handleAnswer(e){
+        console.log("made it")
+    };
 }
 
 
