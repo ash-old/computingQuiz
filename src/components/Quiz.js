@@ -11,10 +11,10 @@ import React, {Component} from 'react';
         <div>
             <div> <p className="question" dangerouslySetInnerHTML={{ __html:question } }/></div>
                         <div >
-                            <button className="button" onClick={() => handleAnswer(shuffledAnswer[0])}>1. {shuffledAnswer[0]}</button>
-                            <button className="button" onClick={() => handleAnswer(shuffledAnswer[1])}>2. {shuffledAnswer[1]}</button>
-                            <button className="button" onClick={() => handleAnswer(shuffledAnswer[2])}>3. {shuffledAnswer[2]}</button>
-                            <button className="button" onClick={() => handleAnswer(shuffledAnswer[3])}>4. {shuffledAnswer[3]}</button>
+                            <button className="button" onClick={() => handleAnswer(shuffledAnswer[0])} dangerouslySetInnerHTML={{ __html:shuffledAnswer[0]}} />
+                            <button className="button" onClick={() => handleAnswer(shuffledAnswer[1])} dangerouslySetInnerHTML={{ __html:shuffledAnswer[1]}} />
+                            <button className="button" onClick={() => handleAnswer(shuffledAnswer[2])}dangerouslySetInnerHTML={{ __html:shuffledAnswer[2]}} />
+                            <button className="button" onClick={() => handleAnswer(shuffledAnswer[3])} dangerouslySetInnerHTML={{ __html:shuffledAnswer[3]}} />
                         </div>
         </div>
     )
